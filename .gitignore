@@ -1,0 +1,4 @@
+.idea
+venv
+configuration.ini
+execution_step_*
