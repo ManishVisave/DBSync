@@ -2,3 +2,6 @@
 venv
 configuration.ini
 execution_step_*
+build
+DBSyncTool.egg-info
+dist

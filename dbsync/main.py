@@ -1,7 +1,7 @@
-from DBHelper import DBHelper
-from ConfigParserHelper import ConfigParserHelper
-from QueryConstants import QueryConstants
-from RedashHelper import RedashHelper
+from dbsync.DBHelper import DBHelper
+from dbsync.ConfigParserHelper import ConfigParserHelper
+from dbsync.QueryConstants import QueryConstants
+from dbsync.RedashHelper import RedashHelper
 import pandas as pd
 import argparse
 
