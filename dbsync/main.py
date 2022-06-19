@@ -25,7 +25,7 @@ def get_formatted_query(query):
     return query.replace(':tenant_id', args['tenant_id'])
 
 
-if __name__ == '__main__':
+def main():
     parser = argparse.ArgumentParser(description='Db Sync Tool')
     parser.add_argument('-c', '--config-file-name', help='Name of the config file', required=True)
     parser.add_argument('-t', '--tenant-id', help='Tenant Id for db sync', required=True)
@@ -46,7 +46,12 @@ if __name__ == '__main__':
     save_redash_to_local(get_formatted_query(QueryConstants.TENANT_PROPERTY_QUERY), 'tenant_property')
     save_redash_to_local(get_formatted_query(QueryConstants.EXECUTION_BUCKET_QUERY), 'execution_buckets')
     save_redash_to_local(get_formatted_query(QueryConstants.EXECUTION_SUMMARY_GROUP_QUERY), 'execution_summary_group')
-    save_redash_to_local(get_formatted_query(QueryConstants.EXECUTION_SUMMARY_CUSTOMIZATION_QUERY), 'execution_summarycustomization')
+    save_redash_to_local(get_formatted_query(QueryConstants.EXECUTION_SUMMARY_CUSTOMIZATION_QUERY),
+                         'execution_summarycustomization')
     save_redash_to_local(get_formatted_query(QueryConstants.EXECUTION_STEP_QUERY), 'execution_step')
 
     print(f'\n\nAll tables processed')
+
+
+if __name__ == '__main__':
+    main()
